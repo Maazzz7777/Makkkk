@@ -1,0 +1,54 @@
+
+
+
+
+6. Create a form like registration form, feedback 
+   form, after submit hide create form and enable 
+   the display section
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <style>
+        .hide{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <div>
+        <h1>Login Form</h1>
+        <form action="#" id="form">
+        <label>Username:<input type="text" /></label>
+        <br/>
+        <label>Password:<input type="password" required/></label>
+        <br/>
+        <button type="submit" id="btn">Login</button>
+        </form>
+    </div>
+    <div id="aftersub" class="hide">
+        <h1>Logged Successfully</h1>
+    </div>
+
+    <script>
+
+        let form=document.getElementById("form");
+        let aftersub=document.getElementById("aftersub");
+
+        form.addEventListener("submit", (e)=> {
+            e.preventDefault();
+            form.classList.add("hide");
+            aftersub.classList.remove("hide");
+        })
+    </script>
+
+
+    
+</body>
+</html>
